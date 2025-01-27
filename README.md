@@ -20,6 +20,6 @@ Training metrics, evaluation metrics, and videos are logged via `wandb` by defau
 Here are some example commands (see [hyperparameters.sh](hyperparameters.sh) for the full list of commands):
 
 ```shell
-# antmaze-large-navigate-v0 (HIQL)
+# antmaze-large-navigate-v0 (PI-HIQL)
 python main.py --env_name=antmaze-large-navigate-v0 --agent=agents/pi_hiql.py 
 ```
