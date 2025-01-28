@@ -21,7 +21,7 @@ Here are some example commands (see [hyperparameters.sh](hyperparameters.sh) for
 python main.py --env_name=antmaze-large-navigate-v0 --agent=agents/pi_hiql.py 
 ```
 
-### Acknowledgement
+### Acknowledgements
 
 We want to thank the authors of the [OGBench](https://seohong.me/projects/ogbench/) benchmark for their amazing work.
 Most of this code is based on their implementations. Please refer also to their [GitHub Repo](https://github.com/seohongpark/ogbench).
