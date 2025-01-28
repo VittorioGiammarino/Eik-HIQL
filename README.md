@@ -3,9 +3,6 @@ Official implementation of Physics-informed Value Learner for Scalable Offline G
 
 ### Installation
 
-We want to thank the authors of the [OGBench](https://seohong.me/projects/ogbench/) benchmark for their amazing work.
-Most of this code is based on their implementations. Please refer also to their [GitHub Repo](https://github.com/seohongpark/ogbench).
-
 Our implementations require Python 3.9+ and additional dependencies, including `jax >= 0.4.26`.
 To install these dependencies, run:
 
@@ -23,3 +20,8 @@ Here are some example commands (see [hyperparameters.sh](hyperparameters.sh) for
 # antmaze-large-navigate-v0 (PI-HIQL)
 python main.py --env_name=antmaze-large-navigate-v0 --agent=agents/pi_hiql.py 
 ```
+
+### Acknowledgement
+
+We want to thank the authors of the [OGBench](https://seohong.me/projects/ogbench/) benchmark for their amazing work.
+Most of this code is based on their implementations. Please refer also to their [GitHub Repo](https://github.com/seohongpark/ogbench).
