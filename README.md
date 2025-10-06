@@ -1,5 +1,5 @@
 # Eik-HIQL
-Official implementation of Physics-informed Value Learner for Scalable Offline Goal-Conditioned Reinforcement Learning (Eikonal-regularized Hierarchical Implicit Q-learning (Eik-HIQL)) accepted as a conference paper in NeurIPS 2025. 
+Official implementation of [Physics-informed Value Learner for Scalable Offline Goal-Conditioned Reinforcement Learning](https://arxiv.org/pdf/2509.06782?) (Eikonal-regularized Hierarchical Implicit Q-learning (Eik-HIQL)) accepted as a conference paper in NeurIPS 2025. 
 
 ### Installation
 
