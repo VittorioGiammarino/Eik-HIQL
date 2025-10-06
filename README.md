@@ -10,7 +10,7 @@ To install these dependencies, run:
 pip install -r requirements.txt
 ```
 
-### Running PI-HIQL
+### Running Eik-HIQL
 
 To train an agent, you can run the `main.py` script.
 Training metrics, evaluation metrics, and videos are logged via `wandb` by default.
