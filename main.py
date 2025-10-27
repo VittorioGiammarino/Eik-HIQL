@@ -41,6 +41,7 @@ flags.DEFINE_float('eval_temperature', 0, 'Actor temperature for evaluation.')
 flags.DEFINE_float('eval_gaussian', None, 'Action Gaussian noise for evaluation.')
 flags.DEFINE_integer('video_episodes', 1, 'Number of video episodes for each task.')
 flags.DEFINE_integer('plot_value_function', 1, 'Number of video episodes for each task.')
+flags.DEFINE_integer('plot_value_function_during_training', 0, 'Number of video episodes for each task.')
 flags.DEFINE_integer('video_frame_skip', 3, 'Frame skip for videos.')
 flags.DEFINE_integer('eval_on_cpu', 1, 'Whether to evaluate on CPU.')
 flags.DEFINE_integer('gpu_id', 0, 'Use this to specify different GPUs')
@@ -189,6 +190,21 @@ def main(_):
 
         #updates
         agent, update_info = agent.update(batch)
+
+        if FLAGS.plot_value_function_during_training>0 and i % 500 == 0:
+            if config['agent_name'] not in ['gcbc']:
+
+                if FLAGS.eval_on_cpu:
+                    eval_agent = jax.device_put(agent, device=jax.devices('cpu')[0])
+                else:
+                    eval_agent = agent
+            
+                plot_value_function_grid(agent=eval_agent,
+                                    agent_name = config['agent_name'],
+                                    task_id=1,
+                                    env=env,
+                                    grid_size=100,
+                                    output_path=os.path.join(FLAGS.save_dir, f'value_function_task_{1}_step_{i}'))
 
         # Log metrics.
         if i % FLAGS.log_interval == 0:
