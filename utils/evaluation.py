@@ -181,7 +181,7 @@ def plot_value_function_grid(agent,
 
     # Plotting
     fig, ax = plt.subplots(figsize=(8, 8))
-    im = ax.imshow(value_function_grid, extent=[x_min, x_max, y_min, y_max], origin='lower', cmap='plasma', zorder=1)
+    im = ax.imshow(value_function_grid, extent=[x_min, x_max, y_min, y_max], origin='lower', cmap='plasma', vmin=-175, vmax=0, zorder=1)
     plt.colorbar(im, ax=ax, label='Value (Goal-Conditioned)')
 
     # Add contour lines
